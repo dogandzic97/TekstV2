@@ -1,0 +1,173 @@
+﻿@model IEnumerable<TekstV2.Models.Propis>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Naslov)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TekstPropisa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OblastDelatnost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdRubrika)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdPordrubrika)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DatumObjavljivanja)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DatumSns)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DatumPocetkaPrimene)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdPropisaRef)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Donosilac)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GlasiloDatum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IstorijskaVezaPropisa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Napomena)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OsnovZaPrestanak)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Podnaslov)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PravniOsnov)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PropisId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VrstaPropisa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DatumPrestankaPropisa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DatumPrestankaVerzije)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdPodpodrubrika)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DatumSnsOsnovnogTekstaPropisa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdNivoa)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Naslov)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TekstPropisa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OblastDelatnost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdRubrika)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdPordrubrika)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DatumObjavljivanja)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DatumSns)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DatumPocetkaPrimene)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdPropisaRef)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Donosilac)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GlasiloDatum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IstorijskaVezaPropisa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Napomena)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OsnovZaPrestanak)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Podnaslov)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PravniOsnov)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PropisId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VrstaPropisa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DatumPrestankaPropisa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DatumPrestankaVerzije)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdPodpodrubrika)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DatumSnsOsnovnogTekstaPropisa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdNivoa)
+            </td>
+            <td>
+                @Html.ActionLink("Unesi tekst", "UnesiTekst", new { id=item.Id }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
